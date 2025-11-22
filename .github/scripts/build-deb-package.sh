@@ -10,7 +10,7 @@ docker run --rm \
   -v "$(pwd):/workspace" \
   -w /workspace \
   debtools:latest \
-  bash -c "dpkg-buildpackage -b -uc -us && mv ../*.deb ../*.buildinfo ../*.changes ./ 2>/dev/null || true"
+  bash -c "dpkg-buildpackage -b -uc -us && mv ../*.deb ./ && mv ../*.buildinfo ../*.changes ./ 2>/dev/null || echo 'Note: Some auxiliary files not found'"
 
 # List generated packages
 echo "Generated packages:"
