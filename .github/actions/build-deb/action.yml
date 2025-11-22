@@ -1,33 +1,19 @@
 name: 'Build Debian Package'
-description: 'Build .deb package in Debian trixie container'
+description: 'Build .deb package using native dpkg tools'
 
 runs:
   using: 'composite'
   steps:
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-
-    - name: Cache Docker layers
-      uses: actions/cache@v4
-      with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-debtools-${{ hashFiles('docker/Dockerfile.debtools') }}
-        restore-keys: |
-          ${{ runner.os }}-buildx-debtools-
-
-    - name: Build debtools Docker image
+    - name: Install build dependencies
       shell: bash
       run: |
-        cd docker
-        docker buildx build \
-          --file Dockerfile.debtools \
-          --tag debtools:latest \
-          --cache-from type=local,src=/tmp/.buildx-cache \
-          --cache-to type=local,dest=/tmp/.buildx-cache,mode=max \
-          --load \
-          .
-        cd ..
+        sudo apt-get update
+        sudo apt-get install -y dpkg-dev debhelper build-essential
 
     - name: Build Debian package
       shell: bash
-      run: .github/scripts/build-deb-package.sh
+      run: |
+        dpkg-buildpackage -b -uc -us
+        mv ../*.deb ./
+        echo "Built packages:"
+        ls -lh *.deb
