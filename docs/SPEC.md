@@ -1,6 +1,6 @@
-# Cockpit Branding HaLOS - Technical Specification
+# HaLOS Cockpit Branding - Technical Specification
 
-**Last Modified**: 2025-11-21
+**Last Modified**: 2025-12-17
 
 ## Project Overview
 
@@ -36,7 +36,7 @@ The package provides the following branding assets:
 
 ### Packaging
 
-- Package name: `cockpit-branding-halos`
+- Package name: `halos-cockpit-branding`
 - Architecture: `all` (no platform-specific binaries)
 - Depends on: `cockpit` package
 - License: MIT

@@ -1,12 +1,12 @@
-# Cockpit Branding HaLOS - System Architecture
+# HaLOS Cockpit Branding - System Architecture
 
-**Last Modified**: 2025-11-21
+**Last Modified**: 2025-12-17
 
 ## System Components
 
 ### Package Structure
 
-The cockpit-branding-halos package consists of:
+The halos-cockpit-branding package consists of:
 
 1. **Branding Assets** - Static files (CSS, images) that define the visual appearance
 2. **Debian Package Metadata** - Control files, scripts, and build configuration
@@ -26,7 +26,7 @@ The build system creates a `.deb` package containing branding assets and install
 ### Package Metadata
 
 Defined in `debian/control`:
-- Package name: cockpit-branding-halos
+- Package name: halos-cockpit-branding
 - Dependencies: cockpit
 - Architecture: all
 - Priority: optional
@@ -86,7 +86,7 @@ Uses dpkg-divert mechanism to handle file ownership conflicts:
 ### APT Repository Integration
 
 Package designed for publication to apt.hatlabs.fi repository:
-- Can be installed via `apt install cockpit-branding-halos`
+- Can be installed via `apt install halos-cockpit-branding`
 - Updates delivered through APT infrastructure
 - Can be included in HaLOS metapackage dependencies
 
@@ -156,7 +156,7 @@ All branding files installed with standard permissions:
 ## File Tree Structure
 
 ```
-cockpit-branding-halos/
+halos-cockpit-branding/
 ├── .git/                    # Git repository
 ├── .gitignore              # Build artifacts exclusion
 ├── AGENTS.md               # AI assistant guide
