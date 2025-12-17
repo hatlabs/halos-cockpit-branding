@@ -4,7 +4,7 @@
 name = "Cockpit"
 url = "https://halos.local:9090"
 description = "System management console"
-icon_url = "https://cockpit-project.org/images/site/cockpit-logo.svg"
+icon_url = "/usr/share/pixmaps/cockpit.svg"
 category = "System"
 
 # Native service (not a Docker container)
