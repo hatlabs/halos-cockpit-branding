@@ -1,17 +1,17 @@
-# Cockpit Branding HaLOS - Agentic Coding Guide
+# HaLOS Cockpit Branding - Agentic Coding Guide
 
-**LAST MODIFIED**: 2025-11-21
+**LAST MODIFIED**: 2025-12-17
 
-**Document Purpose**: Guide for AI assistants working on cockpit-branding-halos.
+**Document Purpose**: Guide for AI assistants working on halos-cockpit-branding.
 
-## 🎯 For Agentic Coding: Use the HaLOS Workspace
+## For Agentic Coding: Use the HaLOS Workspace
 
 **IMPORTANT**: When using Claude Code or other AI assistants, work from the halos-distro workspace repository for full context across all HaLOS repositories.
 
 ```bash
 # Work from workspace
 cd halos-distro/
-# This repo is available as: cockpit-branding-halos/
+# This repo is available as: halos-cockpit-branding/
 ```
 
 **Development Workflows**: See `halos-distro/docs/` folder:
@@ -46,7 +46,7 @@ Custom HaLOS branding package for the Cockpit web interface. Provides Hat Labs l
 ## Project Structure
 
 ```
-cockpit-branding-halos/
+halos-cockpit-branding/
 ├── docs/
 │   ├── SPEC.md           # Technical specification
 │   └── ARCHITECTURE.md   # System architecture

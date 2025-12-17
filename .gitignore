@@ -3,7 +3,7 @@
 *.buildinfo
 *.changes
 debian/.debhelper/
-debian/cockpit-branding-halos/
+debian/halos-cockpit-branding/
 debian/debhelper-build-stamp
 debian/files
 debian/*.substvars

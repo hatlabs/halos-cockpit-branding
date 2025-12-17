@@ -1,3 +1,9 @@
+halos-cockpit-branding (0.3.0-1) unstable; urgency=medium
+
+  * Rename package from cockpit-branding-halos to halos-cockpit-branding.
+
+ -- Matti Airas <matti.airas@hatlabs.fi>  Tue, 17 Dec 2025 23:30:00 +0200
+
 cockpit-branding-halos (0.2.0-1) unstable; urgency=medium
 
   * Use contrasting logo for better visibility in all color schemes.
